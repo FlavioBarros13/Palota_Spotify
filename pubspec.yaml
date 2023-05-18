@@ -31,9 +31,44 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+
+  #to get device information
   package_info_plus: ^4.0.0
+
+  #Rive provide animation
   rive: ^0.10.4
+
+  #Creates device intent to open a service out of app
   url_launcher: ^6.1.11
+
+  #Http request for GET/PUT/DELETE
+  http: ^0.13.6
+
+  #State management
+  get: ^4.6.5
+
+  #Number formatting package
+  intl:
+
+  #Internet Image Loader with cach
+  cached_network_image: ^3.2.3
+
+  #Animated GridView
+  flutter_staggered_grid_view: ^0.6.2
+
+  #List Animation
+  flutter_staggered_animations: ^1.1.1
+
+  #Hide widget on Scroll
+  easy_scroll_animation: ^1.0.2
+
+  #Slide animation for Lists
+  show_up_animation: ^2.0.0
+
+  #Checking device internet status
+  internet_connection_checker: ^1.0.0+1
+
+  pull_to_refresh: ^2.0.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

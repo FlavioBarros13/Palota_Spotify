@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_spotify_africa_assessment/features/landing/presentation/animations/rive_assets.dart';
 import 'package:flutter_spotify_africa_assessment/routes.dart';
 import 'package:rive/rive.dart';
@@ -36,12 +39,22 @@ class _LandingPageState extends State<LandingPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: RiveAnimation.asset(
-        RiveAssets.palotaIntro,
-        alignment: Alignment.center,
-        fit: BoxFit.contain,
-        controllers: [_controller],
+    return  AnnotatedRegion<SystemUiOverlayStyle>(
+      value: Platform.isAndroid?
+      SystemUiOverlayStyle(
+        statusBarIconBrightness: Brightness.light,
+        statusBarColor: Theme.of(context).colorScheme.background,
+        systemNavigationBarColor: Theme.of(context).colorScheme.background,
+        systemNavigationBarIconBrightness: Brightness.light,
+
+      ) :SystemUiOverlayStyle.dark,
+      child: Scaffold(
+        body: RiveAnimation.asset(
+          RiveAssets.palotaIntro,
+          alignment: Alignment.center,
+          fit: BoxFit.contain,
+          controllers: [_controller],
+        ),
       ),
     );
   }
